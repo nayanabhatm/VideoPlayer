@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <title>Video Player</title>
+  </head>
+  <body>
+    <h2>Custom Video Player</h2>
+    <video
+      src="assets/default.mp4"
+      poster="assets/play_icon.png"
+      id="video"
+      class="screen"
+    ></video>
+    <div class="controls">
+      <button class="btn" id="play">
+        <i class="fa fa-play fa-2x"></i>
+      </button>
+      <button class="btn" id="stop">
+        <i class="fa fa-stop fa-2x"></i>
+      </button>
+      <input
+        type="range"
+        name="progress"
+        class="progress"
+        id="progress"
+        min="0"
+        max="100"
+        step="0.1"
+        value="0"
+      />
+      <span id="timestamp" class="timestamp">00:00</span>
+    </div>
+    <div class="file-container">
+      <div class="file-upload">
+        <label for="video-file">Custom Video File</label>
+        <input
+          type="file"
+          name="videoFile"
+          id="video-file"
+          accept=".mp4,.webm,.ogg"
+        />
+      </div>
+      <p>Filename: <em id="file-name">default.mp4</em></p>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
